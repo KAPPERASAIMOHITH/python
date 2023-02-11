@@ -1,11 +1,23 @@
-try:
-    a=int(input("enter the no of fresh loaves:"))
-    b=int(input("enter the no of old loaves:"))
-    c=a*185
-    d=b*185*0.6
-    print("the regular price is:185")
-    print("amount of new loaves is:",c)
-    print("aount of old loaves is:",d)
-    print("total amount is:",c+d)
-except ValueError:
-    print("please enter only positive and without decimal value.")
+# Read the number of fresh loaves being purchased
+fresh_loaves = int(input("Enter the number of fresh loaves purchased: "))
+
+# Read the number of day old loaves being purchased
+day_old_loaves = int(input("Enter the number of day old loaves purchased: "))
+
+# Validate the input
+if fresh_loaves < 0 or day_old_loaves < 0:
+    print("Invalid input. Number of loaves must be non-negative.")
+else:
+    # Calculate the regular price for the fresh loaves
+    fresh_loaves_price = fresh_loaves * 185
+
+    # Calculate the discount price for the day old loaves
+    day_old_loaves_price = day_old_loaves * 185 * 0.4
+
+    # Calculate the total price
+    total_price = fresh_loaves_price + day_old_loaves_price
+
+    # Display the results
+    print("Amount of new loaves: {:.2f}".format(fresh_loaves_price))
+    print("Amount of day old loaves: {:.2f}".format(day_old_loaves_price))
+    print("Total amount: {:.2f}".format(total_price))
