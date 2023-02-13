@@ -17,4 +17,4 @@ def isScramble(s1, s2):
     return dp[0][0][n]
 s1=input("enter the string:")
 s2=input("enter the string:")
-print(isscramble(s1,s2))
+print(isScramble(s1,s2))
